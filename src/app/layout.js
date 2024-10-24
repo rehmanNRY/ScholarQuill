@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Footer, Header } from "@/components";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,8 +26,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        <div className="bg-green-600 py-2 text-center font-semibold text-gray-50 text-sm flex items-center justify-center">Hey please complete your account borading. <Link href="/" className="ml-2 py-0.5 px-3 bg-white text-black rounded">Complete onboarding</Link></div>
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
